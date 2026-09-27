@@ -2,14 +2,112 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <title>Politique de confidentialité</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --text: #1c2230;
+      --muted: #5a6475;
+      --border: #e2e5ea;
+      --accent: #1f4fd1;
+      --accent-soft: #e8eefc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #11141a;
+        --surface: #191d25;
+        --text: #e6e8ec;
+        --muted: #9aa3b2;
+        --border: #2a303b;
+        --accent: #7ea2ff;
+        --accent-soft: #1d2740;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 3rem 1rem 4rem;
+    }
+    header { margin-bottom: 2rem; }
+    .eyebrow {
+      margin: 0 0 .5rem;
+      color: var(--muted);
+      font-size: .8125rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw + .5rem, 2.375rem);
+      line-height: 1.2;
+      letter-spacing: -.01em;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+    }
+    .card p { margin: 0 0 1rem; }
+    .card p:last-child { margin-bottom: 0; }
+    .summary {
+      margin: 0 0 1.5rem;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      background: var(--accent-soft);
+      font-weight: 500;
+    }
+    .contact {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+    a {
+      color: var(--accent);
+      font-weight: 600;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      .card { border: 0; padding: 0; }
+      .summary { background: none; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Politique de confidentialité</h1>
-  <p>Ce service GPT personnalisé ne collecte, ne stocke ni ne partage aucune donnée personnelle identifiable.</p>
-  <p>Les informations échangées servent uniquement à répondre aux requêtes de l’utilisateur.</p>
-  <p>Ce GPT n’utilise aucun cookie, aucun tracker et ne communique aucune donnée à des tiers.</p>
-  <p>Pour toute question, tu peux nous contacter à l’adresse suivante : <strong>contact@exemple.com</strong>.</p>
+  <main>
+    <header>
+      <p class="eyebrow">GPT personnalisé</p>
+      <h1>Politique de confidentialité</h1>
+    </header>
+
+    <article class="card">
+      <p class="summary">Ce service GPT personnalisé ne collecte, ne stocke ni ne partage aucune donnée personnelle identifiable.</p>
+      <p>Les informations échangées servent uniquement à répondre aux requêtes de l’utilisateur.</p>
+      <p>Ce GPT n’utilise aucun cookie, aucun tracker et ne communique aucune donnée à des tiers.</p>
+      <p class="contact">Pour toute question, tu peux nous contacter à l’adresse suivante&nbsp;: <a href="mailto:contact@exemple.com">contact@exemple.com</a>.</p>
+    </article>
+  </main>
 </body>
 </html>
-Ajout privacy.html
